@@ -4,7 +4,7 @@ TREES
 	Binary Search Tree
 		- tree is build from array, order of the array builds different looking trees
 		- left child is smaller than root right child is greater or equal to root
-		- show worst case (sorted array)
+		- show worst case: tree is built from a sorted array (sorted array)-> [7, 8, 13, 14, 21]
 			access
 			search O(n)
 			insert 
@@ -15,12 +15,18 @@ TREES
 			insert 
 			delete 
 		- Space complexity at worst for both cases is O(n)
-
-	Binary Tree
-		each node has utmost two children, also built from an array
 	
-	Heap Tree
-		Heap  structure is another widely used tree structure with a specific ordering property.  There are two types of heap  - Min heap and Max heap. In a min heap the parent of a node must be smaller than the values of all its children.  Similarly in max heap the parent always have greater value compared to all its children. One common implementation of heap is Binary heap where each parent can have at most two children.
+	
+	Min Heap
+		-root is smallest
+		-the parent of a node must be smaller than the values of all its children
+		-siblings have no relation.
+
+	Max Heap  
+		-root is greatest
+		-the parent always have greater value compared to all its children. 
+
+		One common implementation of heap is Binary heap where each parent can have at most two children.
 
 	AVL Tree or Height Balanced Tree 
 		It is a variation of the Binary tree where height difference between left and right sub tree can be at most 1. If at any time they differ by more than one, rebalancing is done to restore this property. Lookup, insertion, and deletion all take O(log n) time in both the average and worst cases, where n is the number of nodes in the tree prior to the operation.
@@ -28,10 +34,21 @@ TREES
 	Splay Tree
 		A splay tree is a self-adjusting binary search tree with the additional property that recently accessed elements are quick to access again. All normal operations on a binary search tree are combined with one basic operation, called splaying. Splaying the tree for a certain element rearranges the tree so that the element is placed at the root of the tree.
 
-SEARCHES
+SEARCHES TREES AND GRAPHS
 	Binary Search
-		- Very effiecient when data is in sorted order
-
+		- Very effiecient when data is in sorted order (binary search tree)
+	Depth-First-Search & Breadth-First-Search
+		Traverse order
+			pre: root,L,R
+			in-order: L,root,R
+			post-order: L,R,root
+		Advantages & Disadvanteges of each search
+		(https://www.kirupa.com/developer/actionscript/depth_breadth_search7.htm)
+	Breadth-First-Search
+		- use when tree is wide (img example)(https://www.kirupa.com/developer/actionscript/images/exampleGraphTut.gif)
+	Depth-First-Search
+		- use when tree is taller than it is wide (img example)(https://www.kirupa.com/developer/actionscript/images/exampleGraphTut.gif)
+	When to use each
 	
 
 SORTS
@@ -65,6 +82,7 @@ DATA STRUCTURES
 BITWISE
 	XOR
 	AND
+	OR
 
 RECURSION
 
