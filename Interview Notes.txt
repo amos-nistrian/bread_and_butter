@@ -1,5 +1,61 @@
 https://gist.github.com/TSiege/cbb0507082bb18ff7e4b
 
+
+SORTS
+	Quick Sort (java uses in Arrays.sort())
+		(Move everything around element )
+		Quick sort picks a random element from the dataset as the pivot element, then sorts all elements smaller before that and all greater than the pivot after it.
+		Then quicksort is executed on the part left of the pivot and right of it.
+		- Not stable
+		- O(lg n) space complexity
+		https://www.geeksforgeeks.org/quick-sort/
+
+	Merge Sort
+		https://www.geeksforgeeks.org/merge-sort/
+		-Needs 
+		-Stable
+		-Space complexity O(n), Good Explanation: https://www.quora.com/Algorithms-How-does-merge-sort-have-space-complexity-O-n-for-worst-case
+
+	Insertion Sort
+		hand of cards sort
+		-stable yes
+		-worst case is reversely sorted array make n-1, n-2, n-3,... n^2 time complexity
+		-average case is O(n^2)
+		-Best case is O(n), an array thats already sorted
+		space is O(1) because its constant since you use the same array
+
+	Bubble Sort
+		(adjacent comparitive sort)
+		https://www.geeksforgeeks.org/bubble-sort/
+
+
+
+
+SEARCHES TREES AND GRAPHS
+	Binary Search
+		- Very effiecient when data is in sorted order (binary search tree)
+	Depth-First-Search & Breadth-First-Search
+		Traverse order
+			pre: root,L,R
+			in-order: L,root,R
+			post-order: L,R,root
+		Advantages & Disadvanteges of each search
+		(https://www.kirupa.com/developer/actionscript/depth_breadth_search7.htm)
+	Breadth-First-Search
+		- use when tree is wide (img example)(https://www.kirupa.com/developer/actionscript/images/exampleGraphTut.gif)
+	Depth-First-Search
+		- use when tree is taller than it is wide (img example)(https://www.kirupa.com/developer/actionscript/images/exampleGraphTut.gif)
+	When to use each
+
+	SHORTEST PATHS
+	Dijkstras shortest path
+			https://www.geeksforgeeks.org/greedy-algorithms-set-6-dijkstras-shortest-path-algorithm/
+
+	Bellman-Ford
+		https://www.hackerearth.com/practice/algorithms/graphs/shortest-path-algorithms/tutorial/
+
+
+
 TREES
 	Binary Search Tree
 		- tree is build from array, order of the array builds different looking trees
@@ -11,7 +67,7 @@ TREES
 			delete
 		- show average case 
 			access
-			search  O(lg(n))
+			search  O(lg (n))
 			insert 
 			delete 
 		- Space complexity at worst for both cases is O(n)
@@ -29,55 +85,17 @@ TREES
 		One common implementation of heap is Binary heap where each parent can have at most two children.
 
 	AVL Tree or Height Balanced Tree 
-		It is a variation of the Binary tree where height difference between left and right sub tree can be at most 1. If at any time they differ by more than one, rebalancing is done to restore this property. Lookup, insertion, and deletion all take O(log n) time in both the average and worst cases, where n is the number of nodes in the tree prior to the operation.
+		It is a variation of the Binary tree where height difference between left and right sub tree can be at most 1. If at any time they differ by more than one, rebalancing is done to restore this property. Lookup, insertion, and deletion all take O(lg (n)) time in both the average and worst cases, where n is the number of nodes in the tree prior to the operation.
 
 	Splay Tree
 		A splay tree is a self-adjusting binary search tree with the additional property that recently accessed elements are quick to access again. All normal operations on a binary search tree are combined with one basic operation, called splaying. Splaying the tree for a certain element rearranges the tree so that the element is placed at the root of the tree.
 
-SEARCHES TREES AND GRAPHS
-	Binary Search
-		- Very effiecient when data is in sorted order (binary search tree)
-	Depth-First-Search & Breadth-First-Search
-		Traverse order
-			pre: root,L,R
-			in-order: L,root,R
-			post-order: L,R,root
-		Advantages & Disadvanteges of each search
-		(https://www.kirupa.com/developer/actionscript/depth_breadth_search7.htm)
-	Breadth-First-Search
-		- use when tree is wide (img example)(https://www.kirupa.com/developer/actionscript/images/exampleGraphTut.gif)
-	Depth-First-Search
-		- use when tree is taller than it is wide (img example)(https://www.kirupa.com/developer/actionscript/images/exampleGraphTut.gif)
-	When to use each
-	
-
-SORTS
-	Quick Sort (java uses in Arrays.sort())
-		(Move everything to )
-		Quick sort picks a random element from the dataset as the pivot element, then sorts all elements smaller before that and all greater than the pivot after it.
-		Then quicksort is executed on the part left of the pivot and right of it.
-		- In place
-		- Not stable
-		- O(n) space complexity
-		https://www.geeksforgeeks.org/quick-sort/
-
-	Merge Sort
-		https://www.geeksforgeeks.org/merge-sort/
-		-Needs 
-		-Stable
-		-Space complexity O(n), Good Explanation: https://www.quora.com/Algorithms-How-does-merge-sort-have-space-complexity-O-n-for-worst-case
-
-	Bubble Sort
-		(adjacent comparitive sort)
-		https://www.geeksforgeeks.org/bubble-sort/
-
-	Insertion Sort
-		deck of cards sort
-		-in place?
-
-
 
 DATA STRUCTURES
+	Hashmap
+	Linked-List
+	Array
+	ArrayList
 
 BITWISE
 	XOR
@@ -85,20 +103,6 @@ BITWISE
 	OR
 
 RECURSION
-
-DATASTRUCTURES
-	Hashmap
-	Linked-List
-	Array
-	ArrayList
-
-SHORTEST PATHS
-	Dijkstras shortest path
-			https://www.geeksforgeeks.org/greedy-algorithms-set-6-dijkstras-shortest-path-algorithm/
-
-	Bellman-Ford
-		https://www.hackerearth.com/practice/algorithms/graphs/shortest-path-algorithms/tutorial/
-
 
 ARRAY AND STRING PROBLEMS
 http://javarevisited.blogspot.sg/2015/06/top-20-array-interview-questions-and-answers.html
