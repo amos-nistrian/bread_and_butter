@@ -36,10 +36,52 @@ SORTS
 		-space O(1)
 
 
+TREE DATA STRUCTURES
+	Binary Search Tree
+		- tree is build from array, order of the array builds different looking trees
+		- left child is smaller than root right child is greater or equal to root
+		- show worst case: tree is built from a sorted array (sorted array)-> [7, 8, 13, 14, 21]
+			access
+			search   O(n)
+			insert 
+			delete
+		- show average case 
+			access a leaf
+			search for a leaf   O(lg (n))
+			insert a leaf
+			delete a leaf
+		- Space complexity at worst for both cases is O(n) a tree with n nodes
+	
+	
+	Max/Min Heap
+		-root is smallest
+		-the parent of a node must be smaller than the values of all its children
+		-siblings have no relation.
+		access O(1)
+		search O(lg n)
+		insert O(lg n) insert at bottom of heap and move it up till it no longer violates the heap
+		remove O(lg n) remove the root, take last leaf and make it root then heapify to satisfy the 
+		the heap poperties
+
+---Working here--
+	AVL Tree or Height Balanced Tree 
+		It is a variation of the Binary tree where height difference between left and right sub tree can be at most 1. If at any time they differ by more than one, rebalancing is done to restore this property. Lookup, insertion, and deletion all take O(lg (n)) time in both the average and worst cases, where n is the number of nodes in the tree prior to the operation.
+
+	Splay Tree
+		A splay tree is a self-adjusting binary search tree with the additional property that recently accessed elements are quick to access again. All normal operations on a binary search tree are combined with one basic operation, called splaying. Splaying the tree for a certain element rearranges the tree so that the element is placed at the root of the tree.
+
+
+OTHER DATA STRUCTURES
+	Hashmap/Dictionary
+	Linked-List
+	Array
+	ArrayList
+	set
+
+
 SEARCHES TREES AND GRAPHS
-	---WORKING HERE----
 	Binary Search
-		- Very effiecient when data is in sorted order (binary search tree)
+
 	Depth-First-Search & Breadth-First-Search
 		Traverse order
 			pre: root,L,R
@@ -60,49 +102,6 @@ SEARCHES TREES AND GRAPHS
 	Bellman-Ford
 		https://www.hackerearth.com/practice/algorithms/graphs/shortest-path-algorithms/tutorial/
 
-
-
-TREES
-	Binary Search Tree
-		- tree is build from array, order of the array builds different looking trees
-		- left child is smaller than root right child is greater or equal to root
-		- show worst case: tree is built from a sorted array (sorted array)-> [7, 8, 13, 14, 21]
-			access
-			search O(n)
-			insert 
-			delete
-		- show average case 
-			access
-			search  O(lg (n))
-			insert 
-			delete 
-		- Space complexity at worst for both cases is O(n)
-	
-	
-	Min Heap
-		-root is smallest
-		-the parent of a node must be smaller than the values of all its children
-		-siblings have no relation.
-
-	Max Heap  
-		-root is greatest
-		-the parent always have greater value compared to all its children. 
-
-		One common implementation of heap is Binary heap where each parent can have at most two children.
-
-	AVL Tree or Height Balanced Tree 
-		It is a variation of the Binary tree where height difference between left and right sub tree can be at most 1. If at any time they differ by more than one, rebalancing is done to restore this property. Lookup, insertion, and deletion all take O(lg (n)) time in both the average and worst cases, where n is the number of nodes in the tree prior to the operation.
-
-	Splay Tree
-		A splay tree is a self-adjusting binary search tree with the additional property that recently accessed elements are quick to access again. All normal operations on a binary search tree are combined with one basic operation, called splaying. Splaying the tree for a certain element rearranges the tree so that the element is placed at the root of the tree.
-
-
-DATA STRUCTURES
-	Hashmap/Dictionary
-	Linked-List
-	Array
-	ArrayList
-	set
 
 
 BITWISE
