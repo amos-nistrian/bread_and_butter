@@ -25,7 +25,6 @@ SORTS
 		-space is O(1) because its constant since you use the same array
 
 
-WORKING HERE
 	Bubble Sort
 		(adjacent comparitive sort) -- buuble the bggest numbers to end of array
 		if left > right, swap else left pointer = right pointer, right pointer = next
@@ -38,6 +37,7 @@ WORKING HERE
 
 
 SEARCHES TREES AND GRAPHS
+	---WORKING HERE----
 	Binary Search
 		- Very effiecient when data is in sorted order (binary search tree)
 	Depth-First-Search & Breadth-First-Search
@@ -98,10 +98,12 @@ TREES
 
 
 DATA STRUCTURES
-	Hashmap
+	Hashmap/Dictionary
 	Linked-List
 	Array
 	ArrayList
+	set
+
 
 BITWISE
 	XOR
