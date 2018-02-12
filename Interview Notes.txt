@@ -7,7 +7,7 @@ SORTS
 		Quick sort picks a random element from the dataset as the pivot element, then sorts all elements smaller before that and all greater than the pivot after it.
 		Then quicksort is executed on the part left of the pivot and right of it.
 		- Not stable
-		- O(lg n) space complexity
+		- O(lg n) space complexity bc of recurrsive calls on the stack frame
 		https://www.geeksforgeeks.org/quick-sort/
 
 	Merge Sort
@@ -22,13 +22,19 @@ SORTS
 		-worst case is reversely sorted array make n-1, n-2, n-3,... n^2 time complexity
 		-average case is O(n^2)
 		-Best case is O(n), an array thats already sorted
-		space is O(1) because its constant since you use the same array
+		-space is O(1) because its constant since you use the same array
 
+
+WORKING HERE
 	Bubble Sort
-		(adjacent comparitive sort)
+		(adjacent comparitive sort) -- buuble the bggest numbers to end of array
+		if left > right, swap else left pointer = right pointer, right pointer = next
 		https://www.geeksforgeeks.org/bubble-sort/
-
-
+		-best case - O(n) already sorted 
+		-average case - O(n^2)
+		-worst cast - O(n^2)
+		-stable yes
+		-space O(1)
 
 
 SEARCHES TREES AND GRAPHS
