@@ -40,35 +40,54 @@ TREE DATA STRUCTURES
 	Binary Search Tree
 		- tree is build from array, order of the array builds different looking trees
 		- left child is smaller than root right child is greater or equal to root
-		- show worst case: tree is built from a sorted array (sorted array)-> [7, 8, 13, 14, 21]
+		- show WORST CASE Tree: tree is built from a sorted array (sorted array)-> [7, 8, 13, 14, 21]
 			access
 			search   O(n)
 			insert 
 			delete
-		- show average case 
+		- show AVERAGE CASE tree 
 			access a leaf
 			search for a leaf   O(lg (n))
-			insert a leaf
+			insert a leaf (how to insert in BST, its just like search)
 			delete a leaf
 		- Space complexity at worst for both cases is O(n) a tree with n nodes
+		- if you want to check if a /bst is in sorted order, do an inorder traversal
+		- height of BST is length of longest path from root to leaf
 	
 	
 	Max/Min Heap
 		-root is smallest
 		-the parent of a node must be smaller than the values of all its children
 		-siblings have no relation.
-		access O(1)
-		search O(lg n)
-		insert O(lg n) insert at bottom of heap and move it up till it no longer violates the heap
-		remove O(lg n) remove the root, take last leaf and make it root then heapify to satisfy the 
-		the heap poperties
 
----Working here--
-	AVL Tree or Height Balanced Tree 
-		It is a variation of the Binary tree where height difference between left and right sub tree can be at most 1. If at any time they differ by more than one, rebalancing is done to restore this property. Lookup, insertion, and deletion all take O(lg (n)) time in both the average and worst cases, where n is the number of nodes in the tree prior to the operation.
+		-insert O(lg n) insert at bottom of heap and move it up till it no longer violates the heap
+		-delete O(lg n) remove the root, take last leaf and make it root then heapify to satisfy the
+			the heap poperties
+		-min/max O(1) 
 
-	Splay Tree
-		A splay tree is a self-adjusting binary search tree with the additional property that recently accessed elements are quick to access again. All normal operations on a binary search tree are combined with one basic operation, called splaying. Splaying the tree for a certain element rearranges the tree so that the element is placed at the root of the tree.
+	BALANCED BINARY SEARCH TREES
+		AVL Tree or Height Balanced Tree 
+			-It is a variation of the Binary tree where height difference between left and right sub tree can be at most 1. If at any time they differ by more than one, rebalancing is done to restore this property. 
+			- height of a node is the longest path DOWN to a leaf node.
+			- height of a node is the greater of the left/right childrens height + 1 
+			-Lookup, insertion, and deletion all take O(lg (n)) time in both the average and worst cases, where n is the number of nodes in the tree prior to the operation.
+			- TO insert do simple BST insert then fix AVL balance
+
+			-insert O(lg (n))
+			-delete O(lg (n))
+			-predecessor/successor (next large/smaller) O(lg (n))
+
+			show how to insert with both cases using left and right rotate
+			https://www.youtube.com/watch?v=FNeL18KsWPc#t=29m02s
+			https://www.youtube.com/watch?v=FNeL18KsWPc#t=35m40s
+			https://www.youtube.com/watch?v=FNeL18KsWPc#t=37m15s
+
+
+	---Working here--
+		Splay Tree
+			A splay tree is a self-adjusting binary search tree with the additional property that recently accessed elements are quick to access again. All normal operations on a binary search tree are combined with one basic operation, called splaying. Splaying the tree for a certain element rearranges the tree so that the element is placed at the root of the tree.
+
+			- all operations O(lg n) average
 
 
 OTHER DATA STRUCTURES
