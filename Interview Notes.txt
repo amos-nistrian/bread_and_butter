@@ -44,7 +44,7 @@ TREE DATA STRUCTURES
 			access
 			search   O(n)
 			insert 
-			delete
+			delete -- look up how to do this
 		- show AVERAGE CASE tree 
 			access a leaf
 			search for a leaf   O(lg (n))
@@ -87,7 +87,14 @@ TREE DATA STRUCTURES
 		Splay Tree
 			A splay tree is a self-adjusting binary search tree with the additional property that recently accessed elements are quick to access again. All normal operations on a binary search tree are combined with one basic operation, called splaying. Splaying the tree for a certain element rearranges the tree so that the element is placed at the root of the tree.
 
-			- all operations O(lg n) average
+			- all operations O(lg n) average time complexity
+			- all operations O(n) worst case time complexity
+
+			- find: works just like BST find, then you splay that node up to the root
+			- min/max: works just like BST min, keep going left/right, then splay that node up to the 	root
+			-insert: works just like BST insert, then you splay that node up to the root.
+			-remove: https://www.youtube.com/watch?v=8Zs1lj_bUV0#t=39m46s
+
 
 
 OTHER DATA STRUCTURES
