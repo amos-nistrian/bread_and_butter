@@ -48,8 +48,8 @@ TREE DATA STRUCTURES
 		- show AVERAGE CASE tree 
 			access a leaf
 			search for a leaf   O(lg (n))
-			insert a leaf (how to insert in BST, its just like search)
-			delete a leaf
+			insert a leaf (how to insert in BST, its just like search, newly inserted as a leaf always)
+			delete a leaf (3 cases: deleting leaf, deleting node with 1 child, deleting node with both l/r children then you replace the node you want to delete with the next smallest in the nodes right subtree)
 		- Space complexity at worst for both cases is O(n) a tree with n nodes
 		- if you want to check if a /bst is in sorted order, do an inorder traversal
 		- height of BST is length of longest path from root to leaf
