@@ -111,17 +111,18 @@ SEARCHES TREES AND GRAPHS
 	
 
 	SHORTEST PATHS
-	Dijkstras shortest path from a node to all other nodes
-		- cant have negative edges or negative cycles
+	Dijkstra
+		you pick a "source" node and it finds shortest paths from the source to all other nodes in the graph, producing a shortest-path tree.
+		-works on directed and undirected graphs without negative edges
 			https://www.geeksforgeeks.org/greedy-algorithms-set-6-dijkstras-shortest-path-algorithm/
 			https://www.youtube.com/watch?v=pVfj6mxhdMw#t=9m58s
 
 			-use a min heap to store nodes
 			-node contains its key, distance from source, and previous vertex
 			-store unvisited vertexs in an array, as you visit a vertex remove it from this array
-
+			
 	Bellman-Ford
-		- CAN have negative edges and negative cycles
+		-works on directed graphs with negative edges which may result in negative cycles
 		https://www.hackerearth.com/practice/algorithms/graphs/shortest-path-algorithms/tutorial/
 
 
