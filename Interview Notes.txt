@@ -124,7 +124,9 @@ SEARCHES TREES AND GRAPHS
 	Bellman-Ford
 		-works on directed graphs with negative edges which may result in negative cycles
 		https://www.hackerearth.com/practice/algorithms/graphs/shortest-path-algorithms/tutorial/
-
+		https://www.youtube.com/watch?v=ozsuci5pIso
+		-cycles through all vertices and if that vertices has a distance that is not infinity it checks its edges and updates any other conected vertices distances.
+		-running time is O(ve)
 
 
 BITWISE
