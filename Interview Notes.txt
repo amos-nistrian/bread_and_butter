@@ -64,6 +64,7 @@ TREE DATA STRUCTURES
 		-delete O(lg n) remove the root, take last leaf and make it root then heapify to satisfy the
 			the heap poperties
 		-min/max O(1) 
+		https://www.google.com/imgres?imgurl=https://algs4.cs.princeton.edu/24pq/images/heap-ops.png&imgrefurl=https://algs4.cs.princeton.edu/24pq/&h=394&w=537&tbnid=yfIBcl75Daia0M:&tbnh=154&tbnw=211&usg=__BuswbQ8b5Sd0f7YxmBHfDfEst7s%3D&vet=10ahUKEwjXxej1vbXZAhVLzWMKHSLxAOMQ9QEILTAA..i&docid=IfdCGHZK8m7myM&sa=X&ved=0ahUKEwjXxej1vbXZAhVLzWMKHSLxAOMQ9QEILTAA
 
 	BALANCED BINARY SEARCH TREES
 		AVL Tree or Height Balanced Tree 
@@ -77,13 +78,12 @@ TREE DATA STRUCTURES
 			-delete O(lg (n))
 			-predecessor/successor (next large/smaller) O(lg (n))
 
+			when you insert or delete you need to rebalance
 			show how to insert with both cases using left and right rotate
 			https://www.youtube.com/watch?v=FNeL18KsWPc#t=29m02s
 			https://www.youtube.com/watch?v=FNeL18KsWPc#t=35m40s
 			https://www.youtube.com/watch?v=FNeL18KsWPc#t=37m15s
 
-
-	---Working here--
 		Splay Tree
 			A splay tree is a self-adjusting binary search tree with the additional property that recently accessed elements are quick to access again. All normal operations on a binary search tree are combined with one basic operation, called splaying. Splaying the tree for a certain element rearranges the tree so that the element is placed at the root of the tree.
 
@@ -96,18 +96,7 @@ TREE DATA STRUCTURES
 			-remove: https://www.youtube.com/watch?v=8Zs1lj_bUV0#t=39m46s
 
 
-
-OTHER DATA STRUCTURES
-	Hashmap/Dictionary
-	Linked-List
-	Array
-	ArrayList
-	set
-
-
 SEARCHES TREES AND GRAPHS
-	Binary Search
-
 	Depth-First-Search & Breadth-First-Search
 		Traverse order
 			pre: root,L,R
@@ -119,13 +108,20 @@ SEARCHES TREES AND GRAPHS
 		- use when tree is wide (img example)(https://www.kirupa.com/developer/actionscript/images/exampleGraphTut.gif)
 	Depth-First-Search
 		- use when tree is taller than it is wide (img example)(https://www.kirupa.com/developer/actionscript/images/exampleGraphTut.gif)
-	When to use each
+	
 
 	SHORTEST PATHS
-	Dijkstras shortest path
+	Dijkstras shortest path from a node to all other nodes
+		- cant have negative edges or negative cycles
 			https://www.geeksforgeeks.org/greedy-algorithms-set-6-dijkstras-shortest-path-algorithm/
+			https://www.youtube.com/watch?v=pVfj6mxhdMw#t=9m58s
+
+			-use a min heap to store nodes
+			-node contains its key, distance from source, and previous vertex
+			-store unvisited vertexs in an array, as you visit a vertex remove it from this array
 
 	Bellman-Ford
+		- CAN have negative edges and negative cycles
 		https://www.hackerearth.com/practice/algorithms/graphs/shortest-path-algorithms/tutorial/
 
 
@@ -134,6 +130,15 @@ BITWISE
 	XOR
 	AND
 	OR
+
+
+OTHER DATA STRUCTURES when to use them
+	Hashmap/Dictionary
+	Linked-List
+	Array
+	ArrayList
+	set
+
 
 RECURSION
 
