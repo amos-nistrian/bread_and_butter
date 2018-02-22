@@ -130,9 +130,29 @@ SEARCHES TREES AND GRAPHS
 
 
 BITWISE
-	XOR
 	AND
+		return 1 if both bits are 1
 	OR
+		return 1 if one or more of the bits is 1
+	XOR 
+		return 1 if EXACTLY one of the bits is 1
+
+	Shifting (multipliccation and division by factors of 2)
+		if we left-shift by 3 we are essentiall dividing by 2^3
+		if we right-shift by 3 we are essentially multiplying that number by 2^3
+		
+		logical shift 
+			in >> shifts, just shift everything over PREPENDING equal number of zeros as are dropping off from LEAST significant side.
+			in << shifts, just shift everything over APPEDNDIN equal number of zeros as are dropping off
+			from MOST significant side
+		
+		arithmetic shift
+			same as logical shift but at the end, preserving the sign by making the the most significant bit the same as the original numbers most significant bit.
+		
+	
+
+	big endian
+	little endian
 
 
 OTHER DATA STRUCTURES when to use them
