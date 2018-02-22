@@ -153,25 +153,74 @@ BITWISE
 	Getting, Setting, Clearing
 		
 
-		Get ith bit out of number, x:
-			i = 5,  x = 0 | 0 1 0 1 1 0 0
+		Get ith bit out of number X:
 
-			create a mask 1 << 5 results in 0 | 0 1 0 0 0 0 0
+			i = 5,  X = 0 | 0 1 0 1 1 0 0
 
-			& it with the x
+			create a mask 1 << i results in 0 | 0 1 0 0 0 0 0
+
+			& it with the X
 
 				0 | 0 1 0 1 1 0 0
-
 			&
 				0 | 0 1 0 0 0 0 0
 			_____________________
-
 				0 | 0 1 0 0 0 0 0
 
 			since this number is !0 we know that bit is set to 1.
 
 
-		Summary: (x & (1 << i)) != 0 	
+			Summary: (X & (1 << i)) != 0 
+
+
+		Set ith bit for a number X:
+
+			i = 5,  X = 0 | 0 0 0 1 1 0 0
+
+			create a mask 1 << i results in 0 | 0 1 0 0 0 0 0
+
+			OR it with the X
+
+				0 | 0 0 0 1 1 0 0
+			|
+				0 | 0 1 0 0 0 0 0
+			_____________________
+				0 | 0 1 0 1 1 0 0
+
+			the 5th bit is now set.
+
+
+			Summary: (X | (1 << i)) 
+
+
+		Clearing ith bit out of a number X:
+
+			i = 5,  X = 0 | 0 1 0 1 1 0 0
+
+			create a mask 1 << i results in 0 | 0 1 0 0 0 0 0
+
+			invert mask by XOR-ing it with 0 | 1 1 1 1 1 1 1 
+
+				0 | 0 1 0 0 0 0 0
+			^
+				0 | 1 1 1 1 1 1 1
+			_____________________
+				0 | 1 0 1 1 1 1 1	<- mask after update
+
+			
+			& it with the X
+
+				0 | 0 1 0 1 1 0 0	<- X
+			&
+				0 | 1 0 1 1 1 1 1 	<- mask
+			_____________________
+				0 | 0 0 0 1 1 0 0
+
+			the 5th bit is now un-set.
+
+
+			Summary:  X & ((1 << i) ^ 127) 
+
 
 	big endian
 	little endian
