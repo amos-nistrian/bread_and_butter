@@ -149,7 +149,29 @@ BITWISE
 		arithmetic shift
 			same as logical shift but at the end, preserving the sign by making the the most significant bit the same as the original numbers most significant bit.
 		
-	
+
+	Getting, Setting, Clearing
+		
+
+		Get ith bit out of number, x:
+			i = 5,  x = 0 | 0 1 0 1 1 0 0
+
+			create a mask 1 << 5 results in 0 | 0 1 0 0 0 0 0
+
+			& it with the x
+
+				0 | 0 1 0 1 1 0 0
+
+			&
+				0 | 0 1 0 0 0 0 0
+			_____________________
+
+				0 | 0 1 0 0 0 0 0
+
+			since this number is !0 we know that bit is set to 1.
+
+
+		Summary: (x & (1 << i)) != 0 	
 
 	big endian
 	little endian
